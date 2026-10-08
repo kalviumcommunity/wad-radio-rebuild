@@ -1,0 +1,60 @@
+/* ============================================================
+   BROKEN STARTING POINT - fix me.
+   This stylesheet is nailed to a fixed 900px width and always
+   three columns, so it overflows on a phone. Your job: rebuild
+   it responsive, mobile-first, with at least two media queries.
+   Edit only this file. Do not touch index.html.
+   ============================================================ */
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #eef2f7;
+}
+
+.page {
+  width: 900px;        /* fixed: cannot shrink below 900px */
+  margin: 0 auto;
+}
+
+.top {
+  padding: 16px;
+  background: #1e3a8a;
+  color: #fff;
+}
+.top h1 { margin: 0; font-size: 1.3rem; }
+.top p  { margin: 4px 0 0; opacity: 0.9; }
+
+.stations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* always 3 across */
+  gap: 10px;
+  padding: 14px;
+}
+
+.station {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 9px;
+  padding: 13px;
+  font-weight: 600;
+}
+
+/* -----------------------------------------------------------
+   YOUR AGENDA (work top to bottom, saving after each step):
+
+   1. See it break: make the preview narrow and watch it overflow.
+   2. Make the base fluid + mobile-first:
+        .page      -> width: 100%;  max-width: 1000px;
+        .stations  -> grid-template-columns: 1fr;
+   3. Add the tablet band (only between 600px and 899px):
+        @media (min-width: 600px) and (max-width: 899px) {
+          .stations { grid-template-columns: repeat(2, 1fr); }
+        }
+   4. Add the desktop breakpoint:
+        @media (min-width: 900px) {
+          .stations { grid-template-columns: repeat(3, 1fr); }
+        }
+   5. Drag the preview across the whole range: 1 -> 2 -> 3 columns,
+      no overflow at any width (check the awkward ~700px middle too).
+   ----------------------------------------------------------- */
