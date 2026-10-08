@@ -1,0 +1,11 @@
+{
+  "name": "wad-radio-rebuild",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
